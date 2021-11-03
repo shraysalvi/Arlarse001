@@ -116,7 +116,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "templates/"]
-STATIC_ROOT = r'/home/site/wwwroot/templates/Events'
+STATIC_ROOT = BASE_DIR / "templates/"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = [BASE_DIR / "media/"]
