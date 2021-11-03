@@ -116,7 +116,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "templates/"]
-STATIC_ROOT = r'C:\Users\JosephCollado\Desktop\Arlarse\Al'
+STATIC_ROOT = r'/home/site/wwwrootArlarse/templates/Events'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = [BASE_DIR / "media/"]
