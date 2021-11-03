@@ -31,7 +31,7 @@ def event_page(request):
             mails = subscriber_form.cleaned_data['subscriber_mail']
             StoreSubscribeMails(mails)
             result = "Subscribed, See You Again!"
-            return render(request, "Events/html/EventPage.html", {'result': result})
+            return render(request, "Events/html/index.html", {'result': result})
         if application_form.is_valid():
             details = application_form.cleaned_data
             valid_age = (dt.date.today() - details['dob']) > dt.timedelta(days=5840)
@@ -48,15 +48,15 @@ def event_page(request):
             if len(wrong_details) == 0:
                 StoreApllyCandidates(details)
                 result = "AEnter Detail Carefully"
-                return render(request, "Events/html/EventPage.html", {'result': result})
+                return render(request, "Events/html/index.html", {'result': result})
             border = dict()
             border = border.fromkeys(wrong_details, 'border-color: red;')
             result = ""
-            return render(request, "Events/html/EventPage.html",
+            return render(request, "Events/html/index.html",
                           {'result': result, 'details': details, 'border': border})
 
         if not (subscriber_form.is_valid() or application_form.is_valid()):
             result = "Enter Detail Carefully!"
-            return render(request, "Events/html/EventPage.html", {'result': result})
+            return render(request, "Events/html/index.html", {'result': result})
     else:
-        return render(request, "Events/html/EventPage.html")
+        return render(request, "Events/html/index.html")
