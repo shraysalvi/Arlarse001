@@ -1082,10 +1082,25 @@ form .Apply-form .educational-details input::placeholder {
 
 }
 
+#privacy_page_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+#privacy_page {
+    padding: 0 10px 0 10px;
+    width: 1440px;
+    height: auto;
+}
 
+@media only screen and (max-width: 1500px) {
 
-
-
-
-
+    #privacy_page {
+        padding: 0 10px 0 10px;
+        width: 80%;
+        height: auto;
+    }
+}

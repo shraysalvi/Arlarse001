@@ -61,3 +61,7 @@ def event_page(request):
                               {'result_applycandidate': result, 'reponse_color': 'red'})
     else:
         return render(request, "Events/html/event_page.html")
+
+
+def privacy_page(request):
+    return render(request, "Events/html/privacy_policy.html")
