@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .form import FormEmailSubscriber, FormApplyCandidates
 import datetime as dt
 from .models import EmailSubscriberForm, ApplyCandidates
+from django.template import RequestContext
 
 all_details = {'full_name', 'gender', 'email', 'dob', 'state', 'college_name', 'degree_level', 'degree_program',
                'graduation_date', 'video'}
@@ -65,3 +66,11 @@ def event_page(request):
 
 def privacy_page(request):
     return render(request, "Events/html/privacy_policy.html")
+
+
+def handler404(request, *args, **argv):
+    return render(request, "Events/html/404.html")
+
+
+def handler500(request, *args, **argv):
+    return render(request, "Events/html/500.html")

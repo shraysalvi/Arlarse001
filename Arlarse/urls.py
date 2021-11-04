@@ -23,3 +23,6 @@ urlpatterns = [
                   path('events/', include("Events.urls")),
                   path('', include("Events.urls"))
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler404 = 'Events.views.handler404'
+handler500 = 'Events.views.handler500'
