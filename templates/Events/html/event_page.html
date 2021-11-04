@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'Events/css/event_page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Events/css/event_page.css' %}">
     <title>Events by Arlarse</title>
 </head>
 <body>
@@ -27,9 +27,9 @@
                    oninput="this.setCustomValidity('Hello')"/>-->
             <input class="mail-subscribe-input" type="email" name="subscriber_mail" placeholder="Enter Your Email"
                    required>
-            <button class="mail-subscribe-button" type="submit">Subscribe</button>
+            <button class="mail-subscribe-button" name="subscribe_form" type="submit">Subscribe</button>
         </form>
-        <div class="content-set-p" style="color: #082032">{{ result }}</div>
+        <div class="response" style="color: {{ reponse_color }}">{{ result }}</div>
     </div>
 
     <div class="img-section-1">
@@ -49,47 +49,56 @@
             <p class="content-set-p">Subscribe us on YouTube to get notification of upcoming events.</p>
         </div>
     </div>
-    <div class="pricing-section">
+
+    <div class="prizing-section">
         {% load static %}
-        <div class="price-1">
-            <h1 class="content-set-h">Who can Apply?</h1>
-            <img src="{% static 'Events/images/who-can-apply.svg' %}" alt="Arlarse" width="30%">
-            <ul style="text-align: left;">
+        <div class="prize-inner">
+            <div class="prize-image-set">
+                <h1 class="content-set-h">Who can Apply?</h1>
+                <img src="{% static 'Events/images/Who-can-apply.svg' %}" alt="Arlarse" width="58%"
+                     style="padding-bottom: 10px;">
+            </div>
+            <ul class="price-content-set" style="text-align: left;">
                 <li class="content-set-p">Anyone above and under the age of 30 and 16</li>
                 <li class="content-set-p">Only the residence of India can apply now</li>
                 <li class="content-set-p">Student must be enrolled in any educational organization</li>
             </ul>
         </div>
-        <div class="price-2">
-            <h1 class="content-set-h">Win Exciting Prizes</h1>
-            <img src="{% static 'Events/images/trophy.svg' %}" alt="Arlarse" width="30%">
-            <p class="content-set-p">Participants are also eligible for interesting prizes like:</p>
-            <ul style="text-align: left;">
-                <li class="content-set-p">Pen, Mug, Stickers or Bottle</li>
-                <li class="content-set-p">T-Shirt</li>
-                <li class="content-set-p">Hudde or Jacket</li>
-                <li class="content-set-p">Special Prize</li>
-            </ul>
+        <div class="prize-inner-center">
+            <div class="prize-image-set">
+                <h1 class="content-set-h">Win Exciting Prizes</h1>
+                <img src="{% static 'Events/images/trophy.svg' %}" alt="Arlarse" width="60%">
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <div>
+                    <p class="content-set-p">Get a chance to win prizes</p>
+                    <ul class="price-content-set" style="text-align: left;">
+                        <li class="content-set-p">Pen, Mug, Stickers or Bottle</li>
+                        <li class="content-set-p">T-Shirt</li>
+                        <li class="content-set-p">Hudde or Jacket</li>
+                        <li class="content-set-p">Special Prize</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="price-3">
-            <h1 class="content-set-h">How to apply?</h1>
-            <img src="{% static 'Events/images/how-to-apply.svg' %}" alt="Arlarse" width="30%">
-            <p class="content-set-p">In 4 easy steps:</p>
-            <ul style="text-align: left;">
-                <li class="content-set-p">Fill all form filed with correct information</li>
-                <li class="content-set-p">Provide a public link by introducing yourself and a topic under 3 minutes</li>
-                <li class="content-set-p">Join us on <a href="#">Discord</a></li>
-                <li class="content-set-p">Talk with our organizers and hit a Event</li>
+        <div class="prize-inner">
+            <div class="prize-image-set">
+                <h1 class="content-set-h">How to apply?</h1>
+                <img src="{% static 'Events/images/how-to-apply.svg' %}" alt="Arlarse" width="58%">
+            </div>
+            <ul class="price-content-set" style="text-align: left;">
+                <li class="content-set-p">Fill form correctly</li>
+                <li class="content-set-p">Provide a public link to introduce yourself with explaining a topic under 3
+                    minutes
+                </li>
+                <li class="content-set-p">Join us on <a href="#">Discord</a> and hit a Event</li>
             </ul>
         </div>
     </div>
-    <p class="content-set-p" style="width: 100%; border-bottom: 3px solid #F0A500; text-align: center">Read all <a
-            href="#">T&C</a> from
-        here</p>
-
-    <form class="Apply-form-out" method="post" action="/events#ReturnApplyHere/">
+    <form class="Apply-form-out" method="post" action="/events/#ReturnApplyHere">
         {% csrf_token %}
         <h1 class="content-set-h" id="ReturnApplyHere">Apply Here</h1>
+        <div class="response" style="color: {{ reponse_color }}">{{ result_applycandidate }}</div>
         <div class="Apply-form">
             <div class="personal-details">
                 <span>Full Name</span>
@@ -120,7 +129,7 @@
             <div class="educational-details">
                 <span>College Name</span>
                 <input class="text" type="text" style="{{ border.college_name }}" value="{{ details.college_name }}"
-                       name="college_name" placeholder="Enter your college or university" maxlength="100" required>
+                       name="college_name" placeholder="Enter your college or university" maxlength="200" required>
 
                 <span>Degree Level</span>
                 <select id="drop-down" name="degree_level" class="select" required>
@@ -132,7 +141,7 @@
 
                 <span>Degree Program</span>
                 <input class="text" type="text" style="{{ border.degree_program }}" name="degree_program"
-                       value="{{ details.degree_program }}" maxlength="30" placeholder="Enter your degree program"
+                       value="{{ details.degree_program }}" maxlength="50" placeholder="Enter your degree program"
                        required>
 
                 <span>Expected Graduation Date</span>
@@ -142,10 +151,10 @@
 
                 <span>Video Link</span>
                 <input class="text" type="url" style="{{ border.video }}" name="video" value="{{ details.video }}"
-                       placeholder="Complete public video url start with http or https" required>
+                       placeholder="Submit public video url start with http or https" required>
             </div>
         </div>
-        <button class="submit" type="submit">Submit</button>
+        <button class="submit" name="applyform" type="submit">Submit</button>
     </form>
 </section>
 <footer class="footer-set">

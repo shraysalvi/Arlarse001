@@ -45,6 +45,12 @@ body {
     font-size: 50px;
 }
 
+.response{
+    color: #082032;
+    font-size: 25px;
+    padding: 10px;
+}
+
 /* oooooooooooooooooo*/
 .mail-subscribe-input {
     font-size: 18px;
@@ -163,6 +169,7 @@ body {
     padding: 30px 0 30px 0;
 }
 
+
 .prize-inner {
     content: "";
     content-visibility: visible;
@@ -178,7 +185,6 @@ body {
     transition-duration: 0.5s;
     border-radius: 10px;
     padding: 10px;
-
 }
 
 .prize-inner:before {
@@ -189,7 +195,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: linear-gradient(0deg, #082032, #CEE5D0, #082032);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
@@ -202,11 +208,10 @@ body {
     transition-timing-function: ease-out;
     border-radius: 10px;
     padding: 10px;
-
 }
 
 .prize-inner:hover, .prize-inner:focus, .prize-inner:active {
-    color: white;
+    color: #082032;
 }
 
 .prize-inner:hover:before, .prize-inner:focus:before, .prize-inner:active:before {
@@ -240,7 +245,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: linear-gradient(0deg, #082032, #FFADAD, #082032);
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -269,10 +274,15 @@ body {
 
 .prize-image-set {
     height: 300px;
+    padding-bottom: 10px;
+    gap: -5%;
 }
 
 .price-content-set {
     width: 400px;
+    color: #082032;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 /*oooooooooooooooooooooooo*/
@@ -1071,4 +1081,11 @@ form .Apply-form .educational-details input::placeholder {
     }
 
 }
+
+
+
+
+
+
+
 

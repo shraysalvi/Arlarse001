@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .form import EmailSubscriberForm
+from .models import EmailSubscriberForm, ApplyCandidates
 
-
-
+admin.site.register(EmailSubscriberForm)
+admin.site.register(ApplyCandidates)
