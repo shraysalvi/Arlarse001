@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
-    <link rel="icon" href="{% static 'Events/images/tittle-img.png' %}" type="image/icon type">
-    <link rel="stylesheet" type="text/css" href="{% static 'Events/css/event_page.css' %}">
+    {% block extrahead %}
+        <link rel="icon" href="{% static 'Events/images/tittle-img.png' %}" type="image/icon type">
+        <link rel="stylesheet" type="text/css" href="{% static 'Events/css/event_page.css' %}">
+    {% endblock %}
     <title>Events by Arlarse</title>
 </head>
 <body>
