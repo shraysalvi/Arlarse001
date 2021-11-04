@@ -51,12 +51,12 @@ def event_page(request):
                 else:
                     border = dict()
                     border = border.fromkeys(wrong_details, 'border-color: red;')
-                    result = "Enter Your Details Carefully"
+                    result = "Enter Your Details Carefully!"
                     return render(request, "Events/html/event_page.html",
                                   {'result_applycandidate': result, 'details': details, 'border': border,
                                    'reponse_color': 'red'})
             else:
-                result = "Enter Your Detail Carefully!"
+                result = "Enter Your Details Carefully!"
                 return render(request, "Events/html/event_page.html",
                               {'result_applycandidate': result, 'reponse_color': 'red'})
     else:
