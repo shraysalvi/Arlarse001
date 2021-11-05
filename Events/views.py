@@ -2,14 +2,13 @@ from django.shortcuts import render
 from .form import FormEmailSubscriber, FormApplyCandidates
 import datetime as dt
 from .models import EmailSubscriberForm, ApplyCandidates
-from django.template import RequestContext
 
 all_details = {'full_name', 'gender', 'email', 'dob', 'state', 'college_name', 'degree_level', 'degree_program',
                'graduation_date', 'video'}
 
 
 # Create your views here.
-def event_page(request):
+def event_page(request, *args, **kwargs):
     if request.method == "POST":
         subscriber_form = FormEmailSubscriber(request.POST)
         application_form = FormApplyCandidates(request.POST)
@@ -64,7 +63,7 @@ def event_page(request):
         return render(request, "Events/html/event_page.html")
 
 
-def privacy_page(request):
+def privacy_page(request, *args):
     return render(request, "Events/html/privacy_policy.html")
 
 
