@@ -156,6 +156,13 @@ body {
 
 }
 
+.tnc_banner {
+    font-weight: bold;
+    font-size: 60px;
+    color: #4ac1f7;
+    padding: 10px;
+}
+
 /*oooooooooooooooooooo*/
 .prizing-section {
     display: flex;
@@ -616,6 +623,13 @@ form .Apply-form .educational-details input::placeholder {
         height: 300px;
     }
 
+    .tnc_banner {
+        font-weight: bold;
+        font-size: 50px;
+        color: #4ac1f7;
+        padding: 10px;
+    }
+
     .price-content-set {
         width: 380px;
     }
@@ -670,6 +684,7 @@ form .Apply-form .educational-details input::placeholder {
         font-weight: bold;
         font-size: 40px;
         color: #4ac1f7;
+        padding: 10px;
     }
 
     .content-set-p {
@@ -833,6 +848,7 @@ form .Apply-form .educational-details input::placeholder {
     }
 
     .tnc_banner {
+        padding: 10px;
         font-weight: bold;
         font-size: 30px;
         color: #4ac1f7;
@@ -1047,6 +1063,7 @@ form .Apply-form .educational-details input::placeholder {
         font-weight: bold;
         font-size: 28px;
         color: #4ac1f7;
+        padding: 10px;
     }
 
     .content-set-p {
@@ -1137,8 +1154,4 @@ form .Apply-form .educational-details input::placeholder {
     }
 }
 
-.tnc_banner {
-    font-weight: bold;
-    font-size: 60px;
-    color: #4ac1f7;
-}
+
