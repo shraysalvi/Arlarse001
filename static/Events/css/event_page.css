@@ -770,20 +770,21 @@ form .Apply-form .educational-details input::placeholder {
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    border: 1px solid #F0A500;
     border-radius: 10px;
+    border: 2px solid #ffffff;
 }
 
 .hvr-bounce-to-bottom-l:before {
     content: url("https://www.arlarse.me/static/Events/images/who.svg");
     position: absolute;
+    width: auto;
     padding: 10px;
     z-index: 2;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: #082032;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -794,7 +795,6 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    border: 1px solid #F0A500;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
@@ -827,21 +827,21 @@ form .Apply-form .educational-details input::placeholder {
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    border: 1px solid #F0A500;
+    border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
 .hvr-bounce-to-bottom-r:before {
     content: url("https://www.arlarse.me/static/Events/images/win.svg");
-    height: 300px;
     padding: 10px;
     position: absolute;
+    width: auto;
     z-index: 2;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: #082032;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -852,7 +852,6 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    border: 1px solid #F0A500;
     border-radius: 10px;
     text-align: center;
 }
@@ -868,7 +867,6 @@ form .Apply-form .educational-details input::placeholder {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-
 .hvr-bounce-to-top {
     padding: 10px;
     display: inline-block;
@@ -881,20 +879,21 @@ form .Apply-form .educational-details input::placeholder {
     transition-property: color;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    border: 1px solid #F0A500;
+    border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
 .hvr-bounce-to-top:before {
     content: url("https://www.arlarse.me/static/Events/images/how.svg");
     padding: 10px;
+    width: auto;
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098D1;
+    background: #082032;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 100%;
@@ -905,10 +904,8 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-    border: 1px solid #F0A500;
     border-radius: 10px;
     text-align: center;
-
 }
 
 .hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
@@ -922,27 +919,120 @@ form .Apply-form .educational-details input::placeholder {
     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 
-
 .tnc_center {
     display: flex;
-    background-color: #4ac1f7;
     flex-direction: row;
-    width: 1400px;
+    width: 1300px;
     height: auto;
     justify-content: center;
     justify-self: center;
-    align-items: center;
     text-align: center;
-    gap: 5%;
+    gap: 3%;
+    padding: 20px;
 }
 
 .arrange-text-prize {
-    width: 350px;
+    width: 300px;
     height: auto;
     color: #FFFFFF;
     font-size: 26px;
+    text-align: left;
 }
 
 .arrange-text-prize li {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .tnc_center {
+        flex-direction: column;
+        width: 80%;
+        place-items: center;
+    }
+
+    .arrange-text-prize {
+        width: 750px;
+        height: 200px;
+        color: #FFFFFF;
+        text-align: center;
+        list-style: none;
+        place-self: center;
+        justify-self: center;
+        horiz-align: center;
+    }
+
+    .arrange-text-prize li {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .arrange-text-prize {
+        width: 80%;
+        height: 150px;
+        color: #FFFFFF;
+        text-align: center;
+        list-style: none;
+        place-self: center;
+        justify-self: center;
+        horiz-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 760px) {
+    .arrange-text-prize {
+        width: 350px;
+        height: auto;
+        color: #FFFFFF;
+        text-align: center;
+        list-style: none;
+        place-self: center;
+        justify-self: center;
+        horiz-align: center;
+    }
+
+    .arrange-text-prize {
+        font-size: 20px;
+    }
+
+    .hvr-bounce-to-top {
+        padding: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        -webkit-transition-property: color;
+        transition-property: color;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+    }
+
+    .hvr-bounce-to-top:before {
+        content: url("https://www.arlarse.me/static/Events/images/win-low.svg");
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-r:before {
+        content: url("https://www.arlarse.me/static/Events/images/win-low.svg");
+        padding: 10px;
+        object-fit: fill;
+    }
+
+}
+
+#tnc_conform {
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: -10px;
+}
+
+#tnc_conform a {
+    color: #F0A500;
+    text-decoration: none;
 }
