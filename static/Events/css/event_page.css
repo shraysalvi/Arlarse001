@@ -775,8 +775,7 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-bottom-l:before {
-    content: "Yeh It is \n Kya batau";
-    font-size: 50px;
+    content: url("https://www.arlarse.me/static/Events/images/who.svg");
     position: absolute;
     padding: 10px;
     z-index: 2;
@@ -833,7 +832,8 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-bottom-r:before {
-    content: "";
+    content: url("https://www.arlarse.me/static/Events/images/win.svg");
+    height: 300px;
     padding: 10px;
     position: absolute;
     z-index: 2;
@@ -855,7 +855,6 @@ form .Apply-form .educational-details input::placeholder {
     border: 1px solid #F0A500;
     border-radius: 10px;
     text-align: center;
-
 }
 
 .hvr-bounce-to-bottom-r:hover, .hvr-bounce-to-bottom-r:focus, .hvr-bounce-to-bottom-r:active {
@@ -887,7 +886,7 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-top:before {
-    content: "";
+    content: url("https://www.arlarse.me/static/Events/images/how.svg");
     padding: 10px;
     position: absolute;
     z-index: 2;
@@ -935,4 +934,15 @@ form .Apply-form .educational-details input::placeholder {
     align-items: center;
     text-align: center;
     gap: 5%;
+}
+
+.arrange-text-prize {
+    width: 350px;
+    height: auto;
+    color: #FFFFFF;
+    font-size: 26px;
+}
+
+.arrange-text-prize li {
+    padding-bottom: 10px;
 }

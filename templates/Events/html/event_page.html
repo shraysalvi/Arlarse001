@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/event_page.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,7 @@
     <title>Events by Arlarse</title>
 </head>
 <body>
-<!--<nav style="display: flex; padding: 10px 10px 10px 10px; ">
-    <a href="#">Home </a>
-    <a href="#">Cramming </a>
-    <a href="#">Events </a>
-    <a href="#" style="text-align: right;">Apply</a>
-</nav>-->
+
 <section class="inner-body">
     <div class="logo-section">
         {% load static %}
@@ -57,20 +53,28 @@
         {% load static %}
         <div class="hvr-bounce-to-bottom-l">
             <h1 class="content-set-h">Who can Apply</h1>
-            <img src="{% static 'Events/images/who.svg' %}" height="auto">
-            <q>
-                <ul>
-                    <li>Hello</li>
-                </ul>
-            </q>
+            <ul class="arrange-text-prize">
+                <li>Resident of India</li>
+                <li>Age between 16 and 30</li>
+                <li>Enrolled in any Educational organization</li>
+                <li>Know Hindi or English language</li>
+            </ul>
         </div>
+        <br>
         <div class="hvr-bounce-to-top">
             <h1 class="content-set-h">How to Apply</h1>
-            <img src="{% static 'Events/images/how.svg' %}" height="auto">
+            <ul class="arrange-text-prize">
+                <li>Just FIll the below form with correct information</li>
+                <li>Upload a public video introducing yourself and explain a topic (max 3 min video)</li>
+            </ul>
         </div>
+        <br>
         <div class="hvr-bounce-to-bottom-r">
             <h1 class="content-set-h">Win Prizes</h1>
-            <img src="{% static 'Events/images/win.svg' %}" height="auto">
+            <ul class="arrange-text-prize">
+                <li>Win exciting prizes on completing tasks</li>
+                <li>Prizes may include a bottle or pen or stickers, a jackets or hoodie, and a Special price</li>
+            </ul>
         </div>
     </div>
     <form class="Apply-form-out" method="post" action="/events/#ReturnApplyHere">
@@ -132,6 +136,8 @@
                        placeholder="Submit public video url start with http or https" required>
             </div>
         </div>
+        <p id="tnc_conform">By Hit Submit button you are agree to our <a href="/privacy">terms, condition and privacy
+            notices</a></p>
         <button class="submit" name="applyform" type="submit">Submit</button>
     </form>
 </section>
