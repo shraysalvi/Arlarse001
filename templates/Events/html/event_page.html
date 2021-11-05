@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/event_page.css"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,50 +53,24 @@
             <p class="content-set-p">Subscribe us on YouTube to get notification of upcoming events.</p>
         </div>
     </div>
-
-    <div class="prizing-section">
+    <div class="tnc_center">
         {% load static %}
-        <div class="prize-inner">
-            <div class="prize-image-set">
-                <h1 class="content-set-h">Who can Apply?</h1>
-                <img src="{% static 'Events/images/Who-can-apply.svg' %}" alt="Arlarse" width="58%"
-                     style="padding-bottom: 10px;">
-            </div>
-            <ul class="price-content-set" style="text-align: left;">
-                <li class="content-set-p">Anyone above and under the age of 30 and 16</li>
-                <li class="content-set-p">Only the residence of India can apply now</li>
-                <li class="content-set-p">Student must be enrolled in any educational organization</li>
-            </ul>
+        <div class="hvr-bounce-to-bottom-l">
+            <h1 class="content-set-h">Who can Apply</h1>
+            <img src="{% static 'Events/images/who.svg' %}" height="auto">
+            <q>
+                <ul>
+                    <li>Hello</li>
+                </ul>
+            </q>
         </div>
-        <div class="prize-inner-center">
-            <div class="prize-image-set">
-                <h1 class="content-set-h">Win Exciting Prizes</h1>
-                <img src="{% static 'Events/images/trophy.svg' %}" alt="Arlarse" width="60%">
-            </div>
-            <div style="display: flex; flex-direction: column;">
-                <div>
-                    <p class="content-set-p">Get a chance to win prizes</p>
-                    <ul class="price-content-set" style="text-align: left;">
-                        <li class="content-set-p">Mug, Stickers or Bottle</li>
-                        <li class="content-set-p">T-Shirt</li>
-                        <li class="content-set-p">Hudde or Jacket</li>
-                        <li class="content-set-p">Special Prize</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="hvr-bounce-to-top">
+            <h1 class="content-set-h">How to Apply</h1>
+            <img src="{% static 'Events/images/how.svg' %}" height="auto">
         </div>
-        <div class="prize-inner">
-            <div class="prize-image-set">
-                <h1 class="content-set-h">How to apply?</h1>
-                <img src="{% static 'Events/images/how-to-apply.svg' %}" alt="Arlarse" width="58%">
-            </div>
-            <ul class="price-content-set" style="text-align: left;">
-                <li class="content-set-p">Fill form correctly</li>
-                <li class="content-set-p">Provide a public link to introduce yourself with explaining a topic under 3
-                    minutes
-                </li>
-                <li class="content-set-p">Join us on <a href="#">Discord</a> and hit a Event</li>
-            </ul>
+        <div class="hvr-bounce-to-bottom-r">
+            <h1 class="content-set-h">Win Prizes</h1>
+            <img src="{% static 'Events/images/win.svg' %}" height="auto">
         </div>
     </div>
     <form class="Apply-form-out" method="post" action="/events/#ReturnApplyHere">
