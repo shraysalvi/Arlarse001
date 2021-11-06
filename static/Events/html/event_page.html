@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    {% block extrahead %}
+        <link rel="icon" href="{% static 'Events/images/tittle-img.png' %}" type="image/icon type">
+        <link rel="stylesheet" type="text/css" href="{% static 'Events/css/event_page.css' %}">
+    {% endblock %}
+    <title>Events by Arlarse</title>
+</head>
+<body>
+<nav>
+    <div class="nav-content">
+        <div class="nav-left-area">
+            <label>
+                <a href="/"><img src="{% static 'Events/images/Arlarse.png' %}"></a>
+            </label>
+            <a href="/comming_soon" style="text-decoration: none;"><p class="nav-set-p" id="nav-cramming">Cramming</p>
+            </a>
+        </div>
+        <div class="nav-right-area">
+            <a href="/events/#ReturnApplyHere" style="text-decoration: none; "><p class="nav-set-p">Apply</p>
+            </a>
+        </div>
+    </div>
+</nav>
+<section class="inner-body">
+    <div class="logo-section">
+        {% load static %}
+        <img class="logo-image-set" src="{% static 'Events/images/Arlarse.png' %}" alt="Arlarse">
+        <h2 class="Slogan">Light Needs You</h2>
+        <form action="/events/" method="post" class="mail-subscribe-outer">
+            {% csrf_token %}
+            <!--<input type="text" id="username" required placeholder="Enter Name"
+                   oninvalid="this.setCustomValidity('Enter User Name Here')"
+                   oninput="this.setCustomValidity('Hello')"/>-->
+            <input class="mail-subscribe-input" type="email" name="subscriber_mail" placeholder="Enter Your Email"
+                   required>
+            <button class="mail-subscribe-button" name="subscribe_form" type="submit">Subscribe</button>
+        </form>
+        <p style="transition: 3s; color: #FFFFFF; font-weight: bold; padding: 0 20px 0 20px; text-shadow: 0.1px 0.1px 10px black">
+            Subscribe email
+            to get latest updates from
+            Arlarse</p>
+        <div class="response" style="color: {{ reponse_color }}">{{ result }}</div>
+    </div>
+
+    <div class="img-section-1">
+        {% load static %}
+        <img class="image-set" src="{% static 'Events/images/img-1.gif' %}" alt="Arlarse">
+        <div class="arrange-text">
+            <h1 class="content-set-h">Lighten Your brain in the field of Knowledge</h1>
+            <p class="content-set-p">Get started by today to enhance yourself in many interesting fields like
+                engineering, AI, Personality development, and many more</p>
+        </div>
+    </div>
+    <div class="img-section-2">
+        {% load static %}
+        <img class="image-set" src="{% static 'Events/images/img-2.gif' %}" alt="Arlarse">
+        <div class="arrange-text">
+            <h1 class="content-set-h">Watch Free on YouTube, Twitch and more</h1>
+            <p class="content-set-p">Subscribe us on YouTube to get notification of upcoming events.</p>
+        </div>
+    </div>
+    <div class="tnc_center">
+        {% load static %}
+        <div class="hvr-bounce-to-bottom-l">
+            <h1 class="content-set-h">Who can Apply</h1>
+            <ul class="arrange-text-prize">
+                <li>Resident of India</li>
+                <li>Age between 16 and 30</li>
+                <li>Enrolled in any Educational organization</li>
+                <li>Know Hindi or English language</li>
+            </ul>
+        </div>
+        <br>
+        <div class="hvr-bounce-to-top">
+            <h1 class="content-set-h">How to Apply</h1>
+            <ul class="arrange-text-prize">
+                <li>Just FIll the below form with correct information</li>
+                <li>Upload a public video introducing yourself and explain a topic (max 3 min video)</li>
+            </ul>
+        </div>
+        <br>
+        <div class="hvr-bounce-to-bottom-r">
+            <h1 class="content-set-h">Win Prizes</h1>
+            <ul class="arrange-text-prize">
+                <li>Win exciting prizes on completing tasks</li>
+                <li>Prizes may include a bottle or pen or stickers, a jackets or hoodie, and a Special price</li>
+            </ul>
+        </div>
+    </div>
+    <form class="Apply-form-out" method="post" action="/events/#ReturnApplyHere">
+        {% csrf_token %}
+        <h1 class="content-set-h" id="ReturnApplyHere">Apply Here</h1>
+        <div class="response" style="color: {{ reponse_color }}">{{ result_applycandidate }}</div>
+        <div class="Apply-form">
+            <div class="personal-details">
+                <span>Full Name</span>
+                <input class="text" style="{{ border.full_name }}" type="text" value="{{ details.full_name }}"
+                       name="full_name" maxlength="50" placeholder="Enter full name" required
+                ><!--oninvalid="this.setCustomValidity('Enter Your Full Name')"
+                       oninput="this.setCustomValidity('Maximum Length: 50 characters')">
+-->
+                <span>Gender</span>
+                <select id="drop-down" name="gender" class="select" required
+                ><!--oninvalid="this.setCustomValidity('Select Your Gender')">-->
+                    <option value="{{ details.gender }}" style="display: none;">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <span>Email</span>
+                <input class="text" style="{{ border.email }}" maxlength="40" type="email" value="{{ details.email }}"
+                       name="email"
+                       placeholder="Enter email id" required>
+                <!--oninvalid="this.setCustomValidity('Enter Email Here')"
+                oninput="this.setCustomValidity('Enter a valid email address')"-->
+
+                <span>Date of Birth</span>
+                <input class="date" style="{{ border.dob }}" type="date" value="{{ details.dob }}" name="dob" required>
+                <!--oninvalid="this.setCustomValidity('Minimum age 16 (< 2006)')"
+                oninput="this.setCustomValidity('Minimum age 16 (< 2006)')"-->
+
+                <span>State</span>
+                <input class="text" type="text" style="{{ border.state }}" maxlength="30" value="{{ details.state }}"
+                       name="state"
+                       placeholder="Enter your state" required>
+                <!--oninvalid="this.setCustomValidity('Only Indian States are Allowed')"
+                oninput="this.setCustomValidity('Enter a Indian State Name')"-->
+            </div>
+            <div class=" educational-details">
+                <span>College Name</span>
+                <input class="text" type="text" style="{{ border.college_name }}" value="{{ details.college_name }}"
+                       name="college_name" placeholder="Enter your college or university" maxlength="200" required>
+                <!--oninput="this.setCustomValidity('Maximum Length < 200')"-->
+
+                <span>Degree Level</span>
+                <select id="drop-down" name="degree_level" class="select" required>
+                    <!--oninvalid="this.setCustomValidity('Select Your Last Degree')"-->
+                    <option value="{{ details.degree_level }}" style="display: none;">Select</option>
+                    <option value="Some School">Some School</option>
+                    <option value="Bachelor Degree">Bachelor Degree</option>
+                    <option value="Master Degree">Master Degree</option>
+                </select>
+
+                <span>Degree Program</span>
+                <input class="text" type="text" style="{{ border.degree_program }}" name="degree_program"
+                       value="{{ details.degree_program }}" maxlength="50" placeholder="Enter your degree program"
+                       required>
+                <!--oninput="this.setCustomValidity('Enter Your Subject')"-->
+
+                <span>Expected Graduation Date</span>
+                <input class="date" style="{{ border.graduation_date }}" type="date"
+                       value="{{ details.graduation_date }}"
+                       name="graduation_date" required>
+
+                <span>Video Link</span>
+                <input class="text" type="url" style="{{ border.video }}" name="video" value="{{ details.video }}"
+                       placeholder="Submit public video url start with http or https" required>
+            </div>
+        </div>
+        <p id="tnc_conform">By Hit Submit button you are agree to our <a href="/privacy">terms, condition and privacy
+            notices</a></p>
+        <button class="submit" name="applyform" type="submit">Submit</button>
+    </form>
+</section>
+<footer class="footer-set">
+    <h1 class="content-set-h">Watch Anywhere, Anytime</h1>
+    <p class="content-set-p">Contact or Connect with us</p>
+    <div class="footer-logo-set">
+        {% load static %}
+        <a href="https://www.youtube.com/channel/UCY_gp5Api4W_1jBJAb2R0uQ"><img class="social-media-logo-yt"
+                                                                                src="{% static 'Events/images/youtube.png' %}"
+                                                                                alt="YouTube"></a>
+        <a href="#"><img class="social-media-logo-twitch" src="{% static 'Events/images/twitch.png' %}"
+                         alt="Twitch"></a>
+        <a href="https://discord.gg/z3dvTZNfkf"><img class="social-media-logo-discord"
+                                                     src="{% static 'Events/images/discord.png' %}"
+                                                     alt="Discord"></a>
+    </div>
+    <div style="width: 100%;">
+        <ul class="about-arlarse">
+            <li><a class="about-arlarse-decorate" href="/help">Help</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">FAQ</a></li>
+            <li><a class="about-arlarse-decorate" href="/privacy">Terms, Conditions, and Privacy Notice</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">Feedback</a></li>
+            <li><a class="about-arlarse-decorate" href="/coming_soon">Cramming</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2021, Arlarse All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>
