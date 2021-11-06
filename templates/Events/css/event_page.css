@@ -772,6 +772,8 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     border-radius: 10px;
     border: 2px solid #ffffff;
+    background-color: #334756;
+
 }
 
 .hvr-bounce-to-bottom-l:before {
@@ -829,6 +831,7 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     border: 2px solid #ffffff;
     border-radius: 10px;
+    background-color: #334756;
 }
 
 .hvr-bounce-to-bottom-r:before {
@@ -881,6 +884,7 @@ form .Apply-form .educational-details input::placeholder {
     transition-duration: 0.5s;
     border: 2px solid #ffffff;
     border-radius: 10px;
+    background-color: #334756;
 }
 
 .hvr-bounce-to-top:before {
@@ -1050,6 +1054,7 @@ form .Apply-form .educational-details input::placeholder {
     }
 
     .arrange-text-prize {
+        text-align: left;
         font-size: 20px;
     }
 

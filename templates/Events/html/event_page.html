@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/event_page.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,12 +88,12 @@
                 <span>Full Name</span>
                 <input class="text" style="{{ border.full_name }}" type="text" value="{{ details.full_name }}"
                        name="full_name" maxlength="50" placeholder="Enter full name" required
-                       oninvalid="this.setCustomValidity('Enter Your Full Name')"
+                ><!--oninvalid="this.setCustomValidity('Enter Your Full Name')"
                        oninput="this.setCustomValidity('Maximum Length: 50 characters')">
-
+-->
                 <span>Gender</span>
                 <select id="drop-down" name="gender" class="select" required
-                        oninvalid="this.setCustomValidity('Select Your Gender')">
+                ><!--oninvalid="this.setCustomValidity('Select Your Gender')">-->
                     <option value="{{ details.gender }}" style="display: none;">Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
@@ -158,22 +157,25 @@
 </section>
 <footer class="footer-set">
     <h1 class="content-set-h">Watch Anywhere, Anytime</h1>
-    <p class="content-set-p">Connect with us</p>
+    <p class="content-set-p">Contact or Connect with us</p>
     <div class="footer-logo-set">
         {% load static %}
-        <a href="#"><img class="social-media-logo-yt" src="{% static 'Events/images/youtube.png' %}" alt="YouTube"></a>
+        <a href="https://www.youtube.com/channel/UCY_gp5Api4W_1jBJAb2R0uQ"><img class="social-media-logo-yt"
+                                                                                src="{% static 'Events/images/youtube.png' %}"
+                                                                                alt="YouTube"></a>
         <a href="#"><img class="social-media-logo-twitch" src="{% static 'Events/images/twitch.png' %}"
                          alt="Twitch"></a>
-        <a href="#"><img class="social-media-logo-discord" src="{% static 'Events/images/discord.png' %}"
-                         alt="Discord"></a>
+        <a href="https://discord.gg/z3dvTZNfkf"><img class="social-media-logo-discord"
+                                                     src="{% static 'Events/images/discord.png' %}"
+                                                     alt="Discord"></a>
     </div>
     <div style="width: 100%;">
         <ul class="about-arlarse">
-            <li><a class="about-arlarse-decorate" href="">Help</a></li>
-            <li><a class="about-arlarse-decorate" href="">FAQ</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">Help</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">FAQ</a></li>
             <li><a class="about-arlarse-decorate" href="/privacy">Terms, Conditions, and Privacy Notice</a></li>
-            <li><a class="about-arlarse-decorate" href="">Feedback</a></li>
-            <li><a class="about-arlarse-decorate" href="">Careers</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">Feedback</a></li>
+            <li><a class="about-arlarse-decorate" href="/coming_soon">Careers</a></li>
         </ul>
     </div>
     <div class="copyright">

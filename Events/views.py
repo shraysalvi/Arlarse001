@@ -73,3 +73,11 @@ def handler404(request, *args, **argv):
 
 def handler500(request, *args, **argv):
     return render(request, "Events/html/500.html")
+
+
+def comming_soon(request):
+    return render(request, "Events/html/commin-soon.html")
+
+
+def _help(request):
+    return render(request, "Events/html/help.html")
