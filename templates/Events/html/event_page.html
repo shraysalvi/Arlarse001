@@ -13,10 +13,22 @@
     <title>Events by Arlarse</title>
 </head>
 <body>
+<nav>
+    <div class="nav-content">
+        <div class="nav-left-area">
+            <label>
+                <a href="/"><img src="{% static 'Events/images/Arlarse.png' %}"></a>
+            </label>
+            <a href="/comming_soon" style="text-decoration: none;"><p class="nav-set-p" id="nav-cramming">Cramming</p>
+            </a>
+        </div>
+        <div class="nav-right-area">
+            <a href="/events/#ReturnApplyHere" style="text-decoration: none; "><p class="nav-set-p">Apply</p>
+            </a>
+        </div>
+    </div>
+</nav>
 <section class="inner-body">
-    <nav class="nav-bar-outer">
-
-    </nav>
     <div class="logo-section">
         {% load static %}
         <img class="logo-image-set" src="{% static 'Events/images/Arlarse.png' %}" alt="Arlarse">
@@ -27,10 +39,13 @@
                    oninvalid="this.setCustomValidity('Enter User Name Here')"
                    oninput="this.setCustomValidity('Hello')"/>-->
             <input class="mail-subscribe-input" type="email" name="subscriber_mail" placeholder="Enter Your Email"
-                   required oninvalid="this.setCustomValidity('Enter Email Here')"
-                   oninput="this.setCustomValidity('Enter a valid email address')">
+                   required>
             <button class="mail-subscribe-button" name="subscribe_form" type="submit">Subscribe</button>
         </form>
+        <p style="transition: 3s; color: #FFFFFF; font-weight: bold; padding: 0 20px 0 20px; text-shadow: 0.1px 0.1px 10px black">
+            Subscribe email
+            to get latest updates from
+            Arlarse</p>
         <div class="response" style="color: {{ reponse_color }}">{{ result }}</div>
     </div>
 
@@ -103,31 +118,31 @@
                 <span>Email</span>
                 <input class="text" style="{{ border.email }}" maxlength="40" type="email" value="{{ details.email }}"
                        name="email"
-                       placeholder="Enter email id" required
-                       oninvalid="this.setCustomValidity('Enter Email Here')"
-                       oninput="this.setCustomValidity('Enter a valid email address')">
+                       placeholder="Enter email id" required>
+                <!--oninvalid="this.setCustomValidity('Enter Email Here')"
+                oninput="this.setCustomValidity('Enter a valid email address')"-->
 
                 <span>Date of Birth</span>
-                <input class="date" style="{{ border.dob }}" type="date" value="{{ details.dob }}" name="dob" required
-                       oninvalid="this.setCustomValidity('Minimum age 16 (< 2006)')"
-                       oninput="this.setCustomValidity('Minimum age 16 (< 2006)')">
+                <input class="date" style="{{ border.dob }}" type="date" value="{{ details.dob }}" name="dob" required>
+                <!--oninvalid="this.setCustomValidity('Minimum age 16 (< 2006)')"
+                oninput="this.setCustomValidity('Minimum age 16 (< 2006)')"-->
 
                 <span>State</span>
                 <input class="text" type="text" style="{{ border.state }}" maxlength="30" value="{{ details.state }}"
                        name="state"
-                       placeholder="Enter your state" required
-                       oninvalid="this.setCustomValidity('Only Indian States are Allowed')"
-                       oninput="this.setCustomValidity('Enter a Indian State Name')">
+                       placeholder="Enter your state" required>
+                <!--oninvalid="this.setCustomValidity('Only Indian States are Allowed')"
+                oninput="this.setCustomValidity('Enter a Indian State Name')"-->
             </div>
             <div class=" educational-details">
                 <span>College Name</span>
                 <input class="text" type="text" style="{{ border.college_name }}" value="{{ details.college_name }}"
-                       name="college_name" placeholder="Enter your college or university" maxlength="200" required
-                       oninput="this.setCustomValidity('Maximum Length < 200')">
+                       name="college_name" placeholder="Enter your college or university" maxlength="200" required>
+                <!--oninput="this.setCustomValidity('Maximum Length < 200')"-->
 
                 <span>Degree Level</span>
-                <select id="drop-down" name="degree_level" class="select" required
-                        oninvalid="this.setCustomValidity('Select Your Last Degree')">
+                <select id="drop-down" name="degree_level" class="select" required>
+                    <!--oninvalid="this.setCustomValidity('Select Your Last Degree')"-->
                     <option value="{{ details.degree_level }}" style="display: none;">Select</option>
                     <option value="Some School">Some School</option>
                     <option value="Bachelor Degree">Bachelor Degree</option>
@@ -137,8 +152,8 @@
                 <span>Degree Program</span>
                 <input class="text" type="text" style="{{ border.degree_program }}" name="degree_program"
                        value="{{ details.degree_program }}" maxlength="50" placeholder="Enter your degree program"
-                       required
-                       oninput="this.setCustomValidity('Enter Your Subject')">
+                       required>
+                <!--oninput="this.setCustomValidity('Enter Your Subject')"-->
 
                 <span>Expected Graduation Date</span>
                 <input class="date" style="{{ border.graduation_date }}" type="date"
@@ -175,7 +190,7 @@
             <li><a class="about-arlarse-decorate" href="/help">FAQ</a></li>
             <li><a class="about-arlarse-decorate" href="/privacy">Terms, Conditions, and Privacy Notice</a></li>
             <li><a class="about-arlarse-decorate" href="/help">Feedback</a></li>
-            <li><a class="about-arlarse-decorate" href="/coming_soon">Careers</a></li>
+            <li><a class="about-arlarse-decorate" href="/coming_soon">Cramming</a></li>
         </ul>
     </div>
     <div class="copyright">
