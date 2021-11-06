@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    {% block extrahead %}
+        <link rel="icon" href="{% static 'Events/images/tittle-img.png' %}" type="image/icon type">
+        <link rel="stylesheet" type="text/css" href="{% static 'Events/css/event_page.css' %}">
+    {% endblock %}
+    <title>404-Arlarse</title>
+</head>
+<body style="justify-content: center;align-items: center;align-self: center; background-color: #082032;display: flex;flex-direction: column;">
+{% load static %}
+<img class="logo-image-set" src="{% static 'Events/images/404.gif' %}" alt="404 Not Found" style="width: 40%">
+
+<footer class="footer-set">
+    <h1 class="content-set-h">Watch Anywhere, Anytime</h1>
+    <p class="content-set-p">Contact or Connect with us</p>
+    <div class="footer-logo-set">
+        {% load static %}
+        <a href="https://www.youtube.com/channel/UCY_gp5Api4W_1jBJAb2R0uQ"><img class="social-media-logo-yt"
+                                                                                src="{% static 'Events/images/youtube.png' %}"
+                                                                                alt="YouTube"></a>
+        <a href="#"><img class="social-media-logo-twitch" src="{% static 'Events/images/twitch.png' %}"
+                         alt="Twitch"></a>
+        <a href="https://discord.gg/z3dvTZNfkf"><img class="social-media-logo-discord"
+                                                     src="{% static 'Events/images/discord.png' %}"
+                                                     alt="Discord"></a>
+    </div>
+    <div style="width: 100%;">
+        <ul class="about-arlarse">
+            <li><a class="about-arlarse-decorate" href="/help">Help</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">FAQ</a></li>
+            <li><a class="about-arlarse-decorate" href="/privacy">Terms, Conditions, and Privacy Notice</a></li>
+            <li><a class="about-arlarse-decorate" href="/help">Feedback</a></li>
+            <li><a class="about-arlarse-decorate" href="/coming_soon">Careers</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; 2021, Arlarse All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>
