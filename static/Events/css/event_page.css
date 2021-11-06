@@ -1013,13 +1013,13 @@ form .Apply-form .educational-details input::placeholder {
     }
 
     .hvr-bounce-to-top:before {
-        content: url("https://www.arlarse.me/static/Events/images/win-low.svg");
+        content: url("https://www.arlarse.me/static/Events/images/win-low.png");
         padding: 10px;
         object-fit: contain;
     }
 
     .hvr-bounce-to-bottom-r:before {
-        content: url("https://www.arlarse.me/static/Events/images/win-low.svg");
+        content: url("https://www.arlarse.me/static/Events/images/win-low.png");
         padding: 10px;
         object-fit: fill;
     }
