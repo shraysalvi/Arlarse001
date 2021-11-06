@@ -47,7 +47,7 @@ body {
 }
 
 .response {
-    color: #ffffff;
+    color: #082032;
     font-size: 25px;
     padding: 10px;
 }
@@ -1080,11 +1080,12 @@ form .Apply-form .educational-details input::placeholder {
         width: 220px;
         height: auto;
         color: #FFFFFF;
-        text-align: center;
+        text-align: left;
         list-style: none;
         place-self: center;
         justify-self: center;
         horiz-align: center;
+        margin-left: 10px;
     }
 
 }
@@ -1184,4 +1185,14 @@ nav {
     .nav-left-area label img {
         height: 50px;
     }
+}
+
+.comming-expected {
+    font-size: 40px;
+    border-radius: 10px;
+    background-color: #FFCCD2;
+    color: #082032;
+    padding: 30px;
+    text-align: center;
+    justify-content: center;
 }
