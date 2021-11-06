@@ -729,7 +729,7 @@ form .Apply-form .educational-details input::placeholder {
 
 @media only screen and (max-width: 1500px) {
 
-    #privacy_page {
+    .privacy_page {
         padding: 0 10px 0 10px;
         width: 85%;
         text-align: justify;
