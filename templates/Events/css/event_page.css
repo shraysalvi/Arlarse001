@@ -981,9 +981,10 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 @media only screen and (max-width: 760px) {
+
     .arrange-text-prize {
         width: 350px;
-        height: auto;
+        height: 180px;
         color: #FFFFFF;
         text-align: center;
         list-style: none;
@@ -996,32 +997,22 @@ form .Apply-form .educational-details input::placeholder {
         font-size: 20px;
     }
 
-    .hvr-bounce-to-top {
-        padding: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        -webkit-transform: perspective(1px) translateZ(0);
-        transform: perspective(1px) translateZ(0);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        position: relative;
-        -webkit-transition-property: color;
-        transition-property: color;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-        border: 2px solid #ffffff;
-        border-radius: 10px;
-    }
-
     .hvr-bounce-to-top:before {
-        content: url("https://www.arlarse.me/static/Events/images/win-low.png");
+        content: url("https://www.arlarse.me/static/Events/images/how-medium.png");
         padding: 10px;
         object-fit: contain;
     }
 
     .hvr-bounce-to-bottom-r:before {
-        content: url("https://www.arlarse.me/static/Events/images/win-low.png");
+        content: url("https://www.arlarse.me/static/Events/images/win-medium.png");
         padding: 10px;
-        object-fit: fill;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-l:before {
+        content: url("https://www.arlarse.me/static/Events/images/who-medium.png");
+        padding: 10px;
+        object-fit: contain;
     }
 
 }
