@@ -86,7 +86,6 @@ body {
     justify-content: center;
     width: 100%;
     height: auto;
-    padding: 30px 0 30px 0;
     gap: 5%;
     animation-name: slideInLeft;
     animation-duration: 0.5s;
@@ -137,7 +136,6 @@ body {
     width: 100%;
     height: auto;
     gap: 5%;
-    padding: 30px 0 30px 0;
     animation-name: slideInRight;
     animation-duration: 0.5s;
     animation-fill-mode: both;
@@ -458,7 +456,7 @@ form .Apply-form .educational-details input::placeholder {
 
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 770px) {
     .logo-image-set {
         width: 300px;
     }
@@ -665,7 +663,7 @@ form .Apply-form .educational-details input::placeholder {
 
     .tnc_banner {
         font-weight: bold;
-        font-size: 28px;
+        font-size: 20px;
         color: #4ac1f7;
         padding: 10px;
     }
@@ -719,7 +717,7 @@ form .Apply-form .educational-details input::placeholder {
 
 }
 
-#privacy_page {
+.privacy_page {
     padding: 0 10px 0 10px;
     width: 1440px;
     height: auto;
@@ -775,7 +773,7 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-bottom-l:before {
-    content: url("https://www.arlarse.me/static/Events/images/who.svg");
+    content: url("Images/who.svg");
     position: absolute;
     width: auto;
     padding: 10px;
@@ -832,7 +830,7 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-bottom-r:before {
-    content: url("https://www.arlarse.me/static/Events/images/win.svg");
+    content: url("Images/win.svg");
     padding: 10px;
     position: absolute;
     width: auto;
@@ -884,7 +882,7 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 .hvr-bounce-to-top:before {
-    content: url("https://www.arlarse.me/static/Events/images/how.svg");
+    content: url("Images/how.svg");
     padding: 10px;
     width: auto;
     position: absolute;
@@ -967,9 +965,13 @@ form .Apply-form .educational-details input::placeholder {
 }
 
 @media only screen and (max-width: 900px) {
+    .tnc_center {
+        width: 60%;
+    }
+
     .arrange-text-prize {
         width: 80%;
-        height: 150px;
+        height: 190px;
         color: #FFFFFF;
         text-align: center;
         list-style: none;
@@ -978,10 +980,26 @@ form .Apply-form .educational-details input::placeholder {
         horiz-align: center;
     }
 
+    .hvr-bounce-to-top:before {
+        content: url("Images/how-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-r:before {
+        content: url("Images/win-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-l:before {
+        content: url("Images/who-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
 }
 
-@media only screen and (max-width: 760px) {
-
+@media only screen and (max-width: 800px) {
     .arrange-text-prize {
         width: 350px;
         height: 180px;
@@ -998,21 +1016,71 @@ form .Apply-form .educational-details input::placeholder {
     }
 
     .hvr-bounce-to-top:before {
-        content: url("https://www.arlarse.me/static/Events/images/how-medium.png");
+        content: url("Images/how-medium.png");
         padding: 10px;
         object-fit: contain;
     }
 
     .hvr-bounce-to-bottom-r:before {
-        content: url("https://www.arlarse.me/static/Events/images/win-medium.png");
+        content: url("Images/win-medium.png");
         padding: 10px;
         object-fit: contain;
     }
 
     .hvr-bounce-to-bottom-l:before {
-        content: url("https://www.arlarse.me/static/Events/images/who-medium.png");
+        content: url("Images/who-medium.png");
         padding: 10px;
         object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .arrange-text-prize {
+        width: 280px;
+        height: 180px;
+        color: #FFFFFF;
+        text-align: center;
+        list-style: none;
+        place-self: center;
+        justify-self: center;
+        horiz-align: center;
+    }
+
+    .arrange-text-prize {
+        font-size: 20px;
+    }
+
+    .hvr-bounce-to-top:before {
+        content: url("Images/how-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-r:before {
+        content: url("Images/win-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    .hvr-bounce-to-bottom-l:before {
+        content: url("Images/who-medium.png");
+        padding: 10px;
+        object-fit: contain;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+
+    .arrange-text-prize {
+        width: 220px;
+        height: auto;
+        color: #FFFFFF;
+        text-align: center;
+        list-style: none;
+        place-self: center;
+        justify-self: center;
+        horiz-align: center;
     }
 
 }
@@ -1021,9 +1089,50 @@ form .Apply-form .educational-details input::placeholder {
     font-size: 12px;
     color: #FFFFFF;
     margin-bottom: -10px;
+    padding: 0 20px 0 20px;
 }
 
 #tnc_conform a {
     color: #F0A500;
     text-decoration: none;
+}
+
+.mail-subscribe-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 770px) {
+    .mail-subscribe-outer {
+        flex-direction: column;
+    }
+
+    .mail-subscribe-input {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .mail-subscribe-button {
+        margin-top: 10px;
+    }
+}
+
+.nav-bar-outer {
+    background-color: #F0A500;
+    width: 100%;
+}
+
+.nav-items {
+    width: 1440px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .nav-bar-outer ul {
+        width: 100%;
+    }
+}
+
+#applicatio-tnc li {
+    padding-bottom: 10px;
 }
