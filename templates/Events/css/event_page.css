@@ -1196,3 +1196,9 @@ nav {
     text-align: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 470px) {
+    .comming-expected {
+        font-size: 22px;
+    }
+}
